@@ -1,0 +1,30 @@
+/*****
+	RCE V5 Style Hotfix table
+*****/
+
+/***** General *****/
+* {outline:none!important;}
+
+/***** Tables Addons *****/
+.no-border td {
+	border:0!important;
+	vertical-align:middle!important;
+}
+.title-mid th {
+	text-align:center;
+	vertical-align:middle!important;
+}
+.td-center {text-align:center;}
+
+/***** Buttons Addons *****/
+.btn-margin-bot {margin-bottom:3px!important;}
+
+/***** Alert Addons *****/
+.auth-alert {margin-top:8px!important;margin-bottom:0px!important;}
+.alert-margin {margin-top:10px!important;}
+
+/***** Paginator Addons *****/
+.btn-pagin {margin-right:5px!important;}
+
+/***** Description block *****/
+.infoblock {font:italic 12px Arial;}

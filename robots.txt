@@ -1,0 +1,10 @@
+User-Agent: *
+Disallow:
+Disallow: /admin/
+Disallow: /engine/
+Disallow: /cart/
+
+Allow: /
+Allow: /sitemap.htm
+Sitemap: https://bud-komplekt.com.ua/sitemap.xml
+

@@ -1,0 +1,32 @@
+AddDefaultCharset utf-8
+RewriteEngine on
+php_value error_reporting 1
+
+# Слеш в конце
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+RewriteRule ^index\.php$ https://bud-komplekt.com.ua/ [R=301,L]
+
+RewriteEngine On
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L] 
+
+RewriteRule ^favicon.png$ favicon.png [L]
+RewriteRule ^robots.txt$ robots.txt [L]
+RewriteRule ^sitemap.xml$ sitemap.xml [L]
+RewriteRule ^sitemap_old.xml$ sitemap_old.xml [L]
+RewriteRule ^search.php$ search.php [L]
+RewriteRule ^(.*)$ index.php?content=$1
+
+
+AddType image/svg+xml svg svgz
+<IfModule mod_deflate.c>
+  <IfModule mod_filter.c>
+      AddOutputFilterByType DEFLATE "image/svg+xml" \
+                                    "text/css" \
+                                    "text/html" \
+                                    "text/javascript"
+  </IfModule>
+</IfModule>
